@@ -2,9 +2,13 @@ import Navbar from '../components/Navbar';
 import Card from '../components/Card';
 import { getSortedPostsData } from '../lib/posts';
 
+const wrapperStyle = {
+    margin: 0,
+}
+
 function HomePage({ allPostsData }) {
     return (
-        <>
+        <div style={wrapperStyle}>
             <Navbar />
             <div>
                 <ul>
@@ -13,12 +17,13 @@ function HomePage({ allPostsData }) {
                             <Card
                                 slug={slug}
                                 title={title}
-                                description={description} />
+                                description={description}
+                                key={slug} />
                         )
                     })}
                 </ul>
             </div>
-        </>
+        </div>
     )
   }
 
