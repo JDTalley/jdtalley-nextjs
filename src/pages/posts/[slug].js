@@ -1,6 +1,7 @@
 import { getAllPostSlugs, getPostData } from "../../lib/posts";
 import { getMDXComponent } from 'mdx-bundler/client';
 import { useMemo } from 'react';
+import BlogLayout from '../../components/Blog/BlogLayout';
 
 
 export async function getStaticPaths() {

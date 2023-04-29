@@ -1,9 +1,8 @@
 import Navbar from '../components/Navbar';
-import Link from 'next/link';
+import Card from '../components/Card';
 import { getSortedPostsData } from '../lib/posts';
 
 function HomePage({ allPostsData }) {
-    console.log(allPostsData);
     return (
         <>
             <Navbar />
@@ -11,10 +10,10 @@ function HomePage({ allPostsData }) {
                 <ul>
                     {allPostsData.map(({ slug, title, description }) => {
                         return (
-                            <>
-                                <Link href={`/posts/${slug}`} key={slug}>{title}</Link>
-                                <p>{description}</p>
-                            </>
+                            <Card
+                                slug={slug}
+                                title={title}
+                                description={description} />
                         )
                     })}
                 </ul>

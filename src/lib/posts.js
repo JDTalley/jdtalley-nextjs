@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 import { bundleMDX } from "mdx-bundler";
 import remarkGfm from 'remark-gfm';
 
-const postsDirectory = path.join(process.cwd(), 'posts');
+const postsDirectory = path.join(process.cwd(), 'src/posts');
 
 export function getAllPostSlugs() {
     const filenames = fs.readdirSync(postsDirectory);

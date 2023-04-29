@@ -12,6 +12,7 @@
   "author": "Dakota Talley",
   "license": "ISC",
   "dependencies": {
+    "@notionhq/client": "^2.2.4",
     "esbuild": "^0.17.12",
     "gray-matter": "^4.0.3",
     "mdx-bundler": "^9.2.1",
