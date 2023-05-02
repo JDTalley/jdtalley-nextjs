@@ -1,27 +1,33 @@
-import Link from 'next/link';
+import styled from "styled-components";
+import NavLink from "../NavLink";
 
-const navStyles = {
-    display: 'flex',
-    backgroundColor: '#000',
-    padding: '1rem',
-    justifyContent: 'space-between',
-};
+const NavWrapper = styled.nav`
+  display: flex;
+  background-color: #000;
+  padding: 1rem;
+  justify-content: space-between;
+`;
 
-const linkStyles = {
-    padding: '0 1rem',
-    justifyContent: 'space-evenly',
-    textDecoration: 'none',
-    color: 'white',
-}
+const StyledLink = styled.a`
+  padding: 0 1rem;
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    color: hsl(205, 62%, 49%);
+  }
+`;
 
 export default function Navbar() {
-    return (
-        <nav style={navStyles}>
-            <Link style ={linkStyles} href="/">JDTalley</Link>
-            <div style={linkStyles}>
-                <Link style ={linkStyles} href="/posts/impossible-list">Impossible List</Link>
-                <Link style ={linkStyles} target="_blank" href="https://timeline.jdtalley.com/">Timeline</Link>
-            </div>
-        </nav>
-    )
+  return (
+    <NavWrapper>
+      <NavLink href="/" name="JDTalley"></NavLink>
+      <div>
+        <NavLink href="/posts/impossible-list" name="Impossible List"></NavLink>
+        <StyledLink target="_blank" href="https://timeline.jdtalley.com/">
+          Timeline
+        </StyledLink>
+      </div>
+    </NavWrapper>
+  );
 }

@@ -1,24 +1,20 @@
-import Navbar from "../Navbar";
+import styled from "styled-components";
 
-const mainStyles = {
-    margin: '0 auto',
-    padding: '0 2rem',
-}
-
-const articleStyles = {
-    margin: '0 auto',
-    maxWidth: 'min(700px, 100%)',
-}
+const Main = styled.main`
+  margin: 0 auto;
+  padding: 0 2rem;
+`;
+const Article = styled.article`
+  margin: 0 auto;
+  max-width: min(700px, 100%);
+`;
 
 const BlogLayout = ({ children }) => {
-    return (
-        <>
-        <Navbar />
-        <main style={mainStyles}>
-            <article style={articleStyles}>{children}</article>
-        </main>
-        </>
-    )
-}
+  return (
+    <Main>
+      <Article>{children}</Article>
+    </Main>
+  );
+};
 
 export default BlogLayout;
