@@ -4,7 +4,7 @@ import styled from "styled-components";
 const StyledLink = styled.a`
   padding: 0 1rem;
   text-decoration: none;
-  color: white;
+  color: ${(props) => props.theme.colors.grayscale.contrast};
 
   &:hover {
     color: hsl(205, 62%, 49%);

@@ -4,7 +4,7 @@ const Main = styled.main`
   margin: 0 auto;
   padding: 0 2rem;
 `;
-const Article = styled.article`
+const Wrapper = styled.div`
   margin: 0 auto;
   max-width: min(700px, 100%);
 `;
@@ -12,7 +12,7 @@ const Article = styled.article`
 const BlogLayout = ({ children }) => {
   return (
     <Main>
-      <Article>{children}</Article>
+      <Wrapper>{children}</Wrapper>
     </Main>
   );
 };
