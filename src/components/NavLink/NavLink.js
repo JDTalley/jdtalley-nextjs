@@ -4,10 +4,10 @@ import styled from "styled-components";
 const StyledLink = styled.a`
   padding: 0 1rem;
   text-decoration: none;
-  color: ${(props) => props.theme.colors.grayscale.contrast};
+  color: ${(props) => props.theme.colors.white};
 
   &:hover {
-    color: hsl(205, 62%, 49%);
+    color: ${(props) => props.theme.colors.primary};
   }
 `;
 

@@ -19,6 +19,16 @@ const montserrat = Montserrat({
 
 const theme = {
   colors: {
+    primary: "hsl(205, 62%, 49%)",
+    secondary: "hsl(1, 55%, 52%)",
+    gray: "hsl(0, 0%, 18%)",
+    white: "hsl(0, 0%, 90%)",
+    black: "hsl(0, 0%, 2%)",
+  },
+};
+
+/* const theme = {
+  colors: {
     grayscale: {
       light: "hsl(0, 0%, 35%)",
       main: "hsl(0, 0%, 18%)",
@@ -38,7 +48,7 @@ const theme = {
       contrast: "hsl(0, 0%, 18%)",
     },
   },
-};
+}; */
 
 export default function MyApp({ Component, pageProps }) {
   return (

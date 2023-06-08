@@ -13,7 +13,7 @@ const StyledLink = styled.h2`
   font-weight: 500;
 
   ${Wrapper}:hover & {
-    color: ${(props) => props.theme.colors.primary.main};
+    color: ${(props) => props.theme.colors.primary};
   }
 `;
 

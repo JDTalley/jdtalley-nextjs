@@ -3,7 +3,7 @@ import NavLink from "../NavLink";
 
 const NavWrapper = styled.nav`
   display: flex;
-  background-color: #000;
+  background-color: ${(props) => props.theme.colors.black};
   padding: 1rem;
   justify-content: space-between;
 `;
@@ -14,7 +14,7 @@ const StyledLink = styled.a`
   color: white;
 
   &:hover {
-    color: hsl(205, 62%, 49%);
+    color: ${(props) => props.theme.colors.primary};
   }
 `;
 
