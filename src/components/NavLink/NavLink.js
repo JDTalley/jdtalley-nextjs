@@ -7,7 +7,7 @@ const StyledLink = styled.a`
   color: ${(props) => props.theme.colors.white};
 
   &:hover {
-    color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.secondary};
   }
 `;
 

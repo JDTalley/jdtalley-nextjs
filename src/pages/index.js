@@ -5,8 +5,8 @@ import { getSortedPostsData } from "../lib/posts";
 import styled from "styled-components";
 
 const Main = styled.main`
-  background-color: ${(props) => props.theme.colors.white};
-  color: ${(props) => props.theme.colors.gray};
+  background-color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.contrastText};
   line-height: 1.6;
   margin: 0 auto;
   padding: 0 2rem;
@@ -21,7 +21,7 @@ const Main = styled.main`
 const Recent = styled.div``;
 
 const RecentTitle = styled.h1`
-  color: ${(props) => props.theme.colors.secondary};
+  color: ${(props) => props.theme.colors.accent};
   text-transform: uppercase;
   font-weight: 500;
 `;
@@ -33,7 +33,7 @@ const BlogList = styled.ul`
 
 const Sidebar = styled.div`
   //max-width: min(700px, 100%);
-  color: ${(props) => props.theme.colors.secondary};
+  color: ${(props) => props.theme.colors.accent};
   text-transform: uppercase;
   font-weight: 500;
 `;
