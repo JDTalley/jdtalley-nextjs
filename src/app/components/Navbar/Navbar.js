@@ -1,5 +1,5 @@
 import NavWrapper from "./NavWrapper";
-import LinkWrapper from "../LinkWrapper";
+import NavLink from "./NavLink";
 import NavSecondaryWrapper from "./NavSecondaryWrapper";
 import Link from "next/link";
 import ListItem from "./ListItem";
@@ -7,21 +7,21 @@ import ListItem from "./ListItem";
 export default function Navbar() {
   return (
     <NavWrapper>
-      <LinkWrapper>
-        <Link href="/">JDTalley.com</Link>
-      </LinkWrapper>
+      <NavLink>
+        <Link href="/">JDTalley</Link>
+      </NavLink>
       <NavSecondaryWrapper>
         <ListItem>
-          <LinkWrapper>
+          <NavLink>
             <Link href="/posts/impossible-list">Impossible List</Link>
-          </LinkWrapper>
+          </NavLink>
         </ListItem>
         <ListItem>
-          <LinkWrapper target="_blank" href="https://timeline.jdtalley.com/">
+          <NavLink target="_blank" href="https://timeline.jdtalley.com/">
             <Link target="_blank" href="https://timeline.jdtalley.com/">
               Timeline
             </Link>
-          </LinkWrapper>
+          </NavLink>
         </ListItem>
       </NavSecondaryWrapper>
     </NavWrapper>

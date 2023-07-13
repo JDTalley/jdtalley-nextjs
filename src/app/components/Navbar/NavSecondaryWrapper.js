@@ -38,7 +38,7 @@ const DropdownList = styled.ul`
     top: 50px;
     width: 100%;
 
-    background-color: ${(props) => props.theme.colors.secondary};
+    background-color: ${(props) => props.theme.colors.gray800};
   }
 `;
 

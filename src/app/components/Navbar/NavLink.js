@@ -1,10 +1,12 @@
 "use client";
 import styled from "styled-components";
 
-const LinkWrapper = styled.span`
+const NavLink = styled.span`
   a {
-    text-decoration: underline;
+    text-decoration: none;
     color: inherit;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
   }
 
   &:hover {
@@ -12,4 +14,4 @@ const LinkWrapper = styled.span`
   }
 `;
 
-export default LinkWrapper;
+export default NavLink;

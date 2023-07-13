@@ -1,11 +1,11 @@
 import React from "react";
-import StyledFooter from "./FooterWrapper";
+import FooterWrapper from "./FooterWrapper";
 
 function Footer() {
   return (
-    <StyledFooter>
+    <FooterWrapper>
       <p>Dakota Talley - 2023</p>
-    </StyledFooter>
+    </FooterWrapper>
   );
 }
 
