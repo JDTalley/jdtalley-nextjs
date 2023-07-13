@@ -1,0 +1,21 @@
+---
+title: "Blitz Mode for ChatGuessr"
+description: "I have joked about making a new mode for a while now, but I recently decided to actually do it. This is Blitz Mode."
+datePublished: "2021-05-20"
+---
+
+I made a new mode for ChatGuessr.
+
+I have joked about making a new mode for a while now, but I recently decided to actually do it. This is Blitz Mode.
+
+The rules are pretty simple: 1 min rounds with unlimited guesses + a 5 second cooldown.
+
+My goal was a fast paced game mode that would potentially be easier for beginners. Not sure how to find where you are with clues? Now you can just take a shot and make adjustments. Seasoned pro? Use the extra guesses to nail the exact location as quickly as possible.
+
+The first stream was a great success. A few players found a good strategy and were getting 0m guesses in no time. There were even a few great moments where a last second guess won the round.
+
+Modifying the game files wasn't too hard. With some digging I discovered Chatguessr was built using electron. So in a few steps I had some familiar JS to work with.
+
+After that, I changed basically duplicated the multiguess option to add some extra logic. I also changed the scoreboard slightly to make sure people had the extra info to make the next guesses.
+
+This was the first experiment into custom modes with Chatguessr. My hope is to dig in and make more advanced modes next.
