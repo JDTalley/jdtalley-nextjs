@@ -1,16 +1,14 @@
-const { withContentlayer } = require("next-contentlayer");
-//import createMDX from "@next/mdx";
-
 const nextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "raw.githubusercontent.com",
+        hostname: "s3.amazonaws.com",
         port: "",
-        pathname: "/JDTalley/**",
+        pathname: "/jdtalley-next/**",
       },
     ],
+    formats: ['image/avif', 'image/webp'],
   },
   compiler: {
     // Enables the styled-components SWC transform
@@ -18,11 +16,4 @@ const nextConfig = {
   },
 };
 
-/* const withMDX = createMDX({
-  extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [remarkGfm],
-  },
-}); */
-
-module.exports = withContentlayer(nextConfig);
+module.exports = nextConfig;

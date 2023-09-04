@@ -1,30 +1,21 @@
-import MainWrapper from "./components/Home/MainWrapper";
-import SidebarWrapper from "./components/Home/SidebarWrapper";
-import { allPosts } from "contentlayer/generated";
-import Card from "./components/Card";
+import { getAllPostsByDate } from "../helpers/file-helpers";
+import MainWrapper from "../components/Home/MainWrapper";
+import SidebarWrapper from "../components/Home/SidebarWrapper";
+import Card from "../components/Card";
 
-function HomePage() {
-  const PostsByDate = allPosts.sort((a, b) => {
-    if (a.datePublished < b.datePublished) {
-      return 1;
-    } else {
-      return -1;
-    }
-  });
-
-  const recentPosts = PostsByDate.slice(0, 10);
-
+async function HomePage() {
+  const posts = await getAllPostsByDate();
   return (
     <MainWrapper>
       <div>
         <h1>Recently Published</h1>
         <div>
-          {recentPosts.map(({ title, description, datePublished, slug }) => {
+          {posts.map(({ slug, title, excerpt, datePublished }) => {
             return (
               <Card
                 slug={slug}
                 title={title}
-                description={description}
+                excerpt={excerpt}
                 datePublished={datePublished}
                 key={slug}
               ></Card>
@@ -32,9 +23,6 @@ function HomePage() {
           })}
         </div>
       </div>
-      <SidebarWrapper>
-        <p>Sidebar</p>
-      </SidebarWrapper>
     </MainWrapper>
   );
 }

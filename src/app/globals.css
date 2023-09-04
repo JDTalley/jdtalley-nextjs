@@ -1,0 +1,14 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--color-page-background);
+  color: var(--color-text);
+}
+
+main {
+  max-width: 896px;
+  margin: 0 auto;
+}

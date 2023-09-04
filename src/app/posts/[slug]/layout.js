@@ -1,5 +1,5 @@
-import BlogMainWrapper from "../../components/Blog/BlogMainWrapper";
+import BlogLayout from "../../../components/Blog/BlogLayout";
 
 export default function RootLayout({ children }) {
-  return <BlogMainWrapper>{children}</BlogMainWrapper>;
+  return <BlogLayout>{children}</BlogLayout>;
 }

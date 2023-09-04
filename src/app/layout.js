@@ -1,8 +1,9 @@
 import { Montserrat } from "next/font/google";
-import Theme from "./components/Theme";
-import BodyWrapper from "./components/Home/BodyWrapper";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import { SITE_NAME } from "../constants";
+import { LIGHT_COLORS, DARK_COLORS } from "../constants";
+import './globals.css';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -11,19 +12,18 @@ const montserrat = Montserrat({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={montserrat.className}>
-      <BodyWrapper>
-        <Theme>
-          <Navbar></Navbar>
-          {children}
-          <Footer></Footer>
-        </Theme>
-      </BodyWrapper>
+    <html lang="en" className={montserrat.className} style={DARK_COLORS}>
+      <body>
+        <Navbar></Navbar>
+        {children}
+        <Footer></Footer>
+      </body>
     </html>
   );
 }
 
 export const metadata = {
-  title: "Home",
-  description: "Welcome to JDTalley.com",
+  metadataBase: new URL('https://www.jdtalley.com'),
+  title: SITE_NAME,
+  description: "A blog covering React, Unity, and Content Creation.",
 };
