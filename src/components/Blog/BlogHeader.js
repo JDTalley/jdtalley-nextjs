@@ -10,6 +10,7 @@ const StyledHeader = styled.header`
   height: 250px;
   width: 100vw;
   margin-left: calc((100% - 100vw) / 2);
+  z-index: -1;
   background: linear-gradient(var(--color-page-accent),var(--color-page-background));
 `;
 

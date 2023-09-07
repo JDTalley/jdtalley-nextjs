@@ -1,4 +1,4 @@
-import Container from "./Container";
+import StickyContainer from "./StickyContainer";
 import Nav from "./Nav";
 import NavLink from "./NavLink";
 import NavSecondaryContainer from "./NavSecondaryContainer";
@@ -7,7 +7,7 @@ import ListItem from "./ListItem";
 
 export default function Navbar() {
   return (
-    <Container>
+    <StickyContainer>
       <Nav>
         <NavLink>
           <Link href="/">JDTalley</Link>
@@ -27,6 +27,6 @@ export default function Navbar() {
           </ListItem>
         </NavSecondaryContainer>
       </Nav>
-    </Container>
+    </StickyContainer>
   );
 }
