@@ -29,7 +29,11 @@ async function Post({ params }) {
     <main>
       <BlogHeader src={frontmatter.image} title={frontmatter.title}></BlogHeader>
       <BlogArticle>
-        <MDXRemote options={{ mdxOptions: { remarkPlugins: [remarkGfm], } }} source={content} components={COMPONENT_MAP}></MDXRemote>
+        <MDXRemote
+          options={{ mdxOptions: { remarkPlugins: [remarkGfm], } }}
+          source={content}
+          components={COMPONENT_MAP}>
+        </MDXRemote>
       </BlogArticle>
     </main>
 
