@@ -3,12 +3,13 @@ import styled from "styled-components";
 
 const LinkWrapper = styled.span`
   a {
-    text-decoration: underline;
-    color: inherit;
+    text-decoration: none;
+    color: var(--color-primary);
   }
 
   &:hover {
-    color: var(--color-primary);
+    text-decoration: underline var(--color-primary) 2px;
+    text-underline-offset: 2px;
   }
 `;
 

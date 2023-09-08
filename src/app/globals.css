@@ -9,6 +9,6 @@ body {
 }
 
 main {
-  max-width: 896px;
+  max-width: min(750px, 100vw);
   margin: 0 auto;
 }
