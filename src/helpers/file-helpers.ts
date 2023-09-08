@@ -3,6 +3,14 @@ import path from 'path';
 import matter from 'gray-matter';
 import React from 'react';
 
+interface Frontmatter {
+  title: String;
+  image: String;
+  excerpt: String;
+  datePublished: String;
+  tags: String[];
+}
+
 const contentPath = path.join(process.cwd(), '/content');
 
 export async function getAllPostsByDate() {
@@ -17,14 +25,16 @@ export async function getAllPostsByDate() {
 
     posts.push({
       slug: fileName.replace('.mdx', ''),
-      ...frontmatter,
+      ...(frontmatter as Frontmatter),
     });
   }
 
   return posts.sort((p1, p2) => (p1.datePublished < p2.datePublished ? 1 : -1));
 }
 
-export const loadPostBySlug = React.cache(async function getPostBySlug(slug) {
+export const loadPostBySlug = React.cache(async function getPostBySlug(
+  slug: String
+) {
   const rawContent = await fs.readFile(`${contentPath}/${slug}.mdx`, 'utf8');
 
   const { data: frontmatter, content } = matter(rawContent);

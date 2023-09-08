@@ -1,15 +1,23 @@
 'use client';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 
-const StyledContainer = styled.div`
+interface Props {
+  children: ReactNode;
+}
+
+interface ClassNameProps {
+  className?: String;
+}
+
+const StyledContainer = styled.div<ClassNameProps>`
   position: sticky;
   top: 0;
   padding: 16px;
   background-color: var(--color-page-accent);
 `;
 
-function StickyContainer({ children }) {
+function StickyContainer({ children }: Props) {
   const [isSticking, setIsSticking] = React.useState(false);
 
   const containerRef = React.useRef(null);
@@ -22,6 +30,8 @@ function StickyContainer({ children }) {
     };
 
     const currentRef = containerRef.current;
+
+    if (!currentRef) return;
 
     const observer = new IntersectionObserver((entries) => {
       const [entry] = entries;
@@ -39,15 +49,15 @@ function StickyContainer({ children }) {
     };
   }, [containerRef]);
 
+  const sticking = isSticking ? 'sticking' : '';
+
   return (
     <>
       <div
         data-scroll-watcher=''
         ref={containerRef}
       ></div>
-      <StyledContainer className={isSticking && 'sticking'}>
-        {children}
-      </StyledContainer>
+      <StyledContainer className={sticking}>{children}</StyledContainer>
     </>
   );
 }

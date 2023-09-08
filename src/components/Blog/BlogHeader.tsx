@@ -1,6 +1,9 @@
 'use client';
 import styled from 'styled-components';
-import Image from 'next/image';
+
+interface Props {
+  title: String;
+}
 
 const StyledHeader = styled.header`
   display: flex;
@@ -28,10 +31,9 @@ const StyledMeta = styled.p`
   text-align: center;
 `;
 
-function BlogHeader({ src, title }) {
+function BlogHeader({ title }: Props) {
   return (
     <StyledHeader>
-      {/* <Image src={src} alt={title} fill style={{ objectFit: 'cover', position: 'absolute', filter: 'brightness(50%)' }}></Image> */}
       <StyledH1>{title}</StyledH1>
     </StyledHeader>
   );

@@ -7,7 +7,11 @@ import COMPONENT_MAP from '../../../helpers/mdx-components';
 import BlogHeader from '../../../components/Blog/BlogHeader';
 import BlogArticle from '../../../components/Blog/BlogArticle';
 
-export async function generateMetadata({ params }) {
+interface Props {
+  params: { slug: string };
+}
+
+export async function generateMetadata({ params }: Props) {
   const { frontmatter } = await loadPostBySlug(params.slug);
 
   const datePublished = new Date(frontmatter.datePublished);
@@ -24,14 +28,12 @@ export async function generateMetadata({ params }) {
   };
 }
 
-async function Post({ params }) {
+async function Post({ params }: Props) {
   const { frontmatter, content } = await loadPostBySlug(params.slug);
+
   return (
     <main>
-      <BlogHeader
-        src={frontmatter.image}
-        title={frontmatter.title}
-      ></BlogHeader>
+      <BlogHeader title={frontmatter.title}></BlogHeader>
       <BlogArticle>
         <MDXRemote
           options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}

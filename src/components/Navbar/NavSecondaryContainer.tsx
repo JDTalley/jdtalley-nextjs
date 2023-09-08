@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import IconButton from '../IconButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,6 +8,9 @@ import { faMoon } from '@fortawesome/free-solid-svg-icons';
 //import { faSun } from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
+  children: ReactNode;
+}
+interface UlProps {
   $display: boolean;
 }
 
@@ -30,7 +33,7 @@ const Button = styled.button`
   }
 `;
 
-const DropdownList = styled.ul<Props>`
+const DropdownList = styled.ul<UlProps>`
   list-style: none;
   display: flex;
   margin: 0;
@@ -50,7 +53,7 @@ const DropdownList = styled.ul<Props>`
   }
 `;
 
-export default function NavSecondaryContainer({ children }) {
+export default function NavSecondaryContainer({ children }: Props) {
   const [display, setDisplay] = React.useState(false);
 
   return (

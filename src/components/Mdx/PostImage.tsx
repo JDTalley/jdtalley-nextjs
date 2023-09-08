@@ -1,8 +1,8 @@
 import React from 'react';
-import Image from 'next/image';
+import Image, { ImageProps } from 'next/image';
 import Link from 'next/link';
 
-function PostImage({ src, alt, width, height }) {
+function PostImage(props: ImageProps) {
   const linkStyle = {
     display: 'flex',
     flexDirection: 'column',
@@ -16,15 +16,13 @@ function PostImage({ src, alt, width, height }) {
   return (
     <div>
       <Link
-        href={src}
+        href={props.src.toString()}
         target='_blank'
         style={linkStyle as React.CSSProperties}
       >
         <Image
-          src={src}
-          alt={alt}
-          width={width}
-          height={height}
+          {...props}
+          alt={props.alt}
           style={imageStyle as React.CSSProperties}
         />
       </Link>
