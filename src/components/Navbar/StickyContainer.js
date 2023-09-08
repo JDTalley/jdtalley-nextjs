@@ -13,28 +13,31 @@ function StickyContainer({ children }) {
   const [isSticking, setIsSticking] = React.useState(false);
 
   const containerRef = React.useRef(null);
-  const options = {
-    root: null,
-    rootMargin: '50px 0px 0px 0px',
-    threshold: 1.0,
-  };
 
   React.useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: '50px 0px 0px 0px',
+      threshold: 1.0,
+    };
+
+    const currentRef = containerRef.current;
+
     const observer = new IntersectionObserver((entries) => {
       const [entry] = entries;
       setIsSticking(!entry.isIntersecting);
     }, options);
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
       if (containerRef) {
-        observer.unobserve(containerRef.current);
+        observer.unobserve(currentRef);
       }
     };
-  }, [containerRef, options]);
+  }, [containerRef]);
 
   return (
     <>
