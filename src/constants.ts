@@ -25,7 +25,7 @@ let DARK_COLORS = {
   '--color-gray-700': 'hsl(205, 0%, 35%)',
   '--color-gray-800': 'hsl(205, 0%, 25%)',
   '--color-gray-900': 'hsl(205, 0%, 15%)',
-  '--color-gary-1000': 'black',
+  '--color-gray-1000': 'black',
   '--color-page-background': '',
   '--color-page-accent': '',
 };

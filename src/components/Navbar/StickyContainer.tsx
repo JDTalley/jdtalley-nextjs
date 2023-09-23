@@ -15,6 +15,11 @@ const StyledContainer = styled.div<ClassNameProps>`
   top: 0;
   padding: 16px;
   background-color: var(--color-page-accent);
+
+  &.sticking {
+    border-bottom: var(--color-page-background) 1px solid;
+    box-shadow: var(--color-page-background) 0px -3px 15px 1px;
+  }
 `;
 
 function StickyContainer({ children }: Props) {
