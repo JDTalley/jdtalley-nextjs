@@ -1,0 +1,25 @@
+.title {
+  margin: 0;
+  font-size: 1.25em;
+  font-weight: 500;
+}
+
+.container {
+  margin-bottom: 32px;
+  padding: 16px;
+  background-color: var(--gray-a2);
+  max-width: 350px;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link:hover h2 {
+  color: var(--color-primary);
+}
+
+.date {
+  margin-bottom: 0;
+}

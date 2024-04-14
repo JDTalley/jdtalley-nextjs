@@ -27,7 +27,7 @@ export default function RootLayout({ children }: Props) {
       <body>
         <ThemeProvider>
           <Navbar></Navbar>
-          {children}
+          <main>{children}</main>
           <Footer></Footer>
         </ThemeProvider>
       </body>

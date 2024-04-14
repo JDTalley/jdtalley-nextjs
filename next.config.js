@@ -9,11 +9,7 @@ const nextConfig = {
       },
     ],
     formats: ['image/avif', 'image/webp'],
-  },
-  compiler: {
-    // Enables the styled-components SWC transform
-    styledComponents: true,
-  },
+  }
 };
 
 module.exports = nextConfig;
