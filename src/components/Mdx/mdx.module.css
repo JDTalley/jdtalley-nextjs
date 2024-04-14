@@ -1,0 +1,19 @@
+.link {
+  text-decoration: none;
+  color: var(--blue-11);
+}
+
+.link:hover {
+  text-decoration: underline var(--blue-11) 2px;
+  text-underline-offset: 2px;
+}
+
+.imageLink {
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}

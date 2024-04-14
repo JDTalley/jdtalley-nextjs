@@ -1,30 +1,22 @@
-import React from 'react';
-import Link from 'next/link';
-import LinkWrapper from '../LinkWrapper';
+import React from "react";
+import Link from "next/link";
+import styles from "./mdx.module.css";
 
-function PostLink({ href, children }: React.JSX.IntrinsicElements['a']) {
+function PostLink({ href, children }: React.JSX.IntrinsicElements["a"]) {
   if (!href) return;
-  //const href = props.href.toString();
 
-  if (href && href.startsWith('/')) {
+  if (href && href.startsWith("/")) {
     return (
-      <span>
-        <LinkWrapper>
-          <Link href={href.toString()}>{children}</Link>
-        </LinkWrapper>
-      </span>
+      <Link className={styles.link} href={href.toString()}>
+        {children}
+      </Link>
     );
   }
 
   return (
-    <LinkWrapper>
-      <Link
-        href={href.toString()}
-        target='_blank'
-      >
-        {children}
-      </Link>
-    </LinkWrapper>
+    <Link className={styles.link} href={href.toString()} target="_blank">
+      {children}
+    </Link>
   );
 }
 
