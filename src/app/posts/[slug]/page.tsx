@@ -31,9 +31,9 @@ async function Post({ params }: Props) {
   const { frontmatter, content } = await loadPostBySlug(params.slug);
 
   return (
-    <main className={styles.main}>
+    <>
       <header className={styles.header}>
-        <h1>{frontmatter.title}</h1>
+        <h1 className={styles.title}>{frontmatter.title}</h1>
       </header>
       <article className={styles.article}>
         <MDXRemote
@@ -42,7 +42,7 @@ async function Post({ params }: Props) {
           components={COMPONENT_MAP}
         ></MDXRemote>
       </article>
-    </main>
+    </>
   );
 }
 

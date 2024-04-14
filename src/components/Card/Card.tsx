@@ -16,7 +16,6 @@ const Card = ({ slug, title, excerpt, datePublished }: Props) => {
       <Link className={styles.link} href={`/posts/${slug}`}>
         <h2 className={styles.title}>{title}</h2>
         <p>{excerpt}</p>
-        <p className={styles.date}>{formattedDate}</p>
       </Link>
     </div>
   );

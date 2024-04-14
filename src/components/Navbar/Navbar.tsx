@@ -3,7 +3,6 @@ import React from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import styles from "./navbar.module.css";
 import Link from "next/link";
-import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 export default function Navbar() {
   const [isSticking, setIsSticking] = React.useState(false);

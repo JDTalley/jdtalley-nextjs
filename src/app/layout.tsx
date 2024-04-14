@@ -5,7 +5,6 @@ import { LIGHT_TOKENS, DARK_TOKENS } from "../constants";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 interface Props {
   children: ReactNode;
@@ -28,7 +27,6 @@ export default function RootLayout({ children }: Props) {
         <ThemeProvider>
           <Navbar></Navbar>
           <main>{children}</main>
-          <Footer></Footer>
         </ThemeProvider>
       </body>
     </html>

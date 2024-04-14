@@ -10,6 +10,12 @@
   background: linear-gradient(var(--gray-a2), var(--color-background));
 }
 
+.title {
+  position: relative;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
 .article {
   max-width: min(1024px, 100vw);
 }
