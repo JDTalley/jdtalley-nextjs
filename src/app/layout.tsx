@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
-import { Montserrat } from "next/font/google";
+import { Fira_Code } from "next/font/google";
 import { SITE_NAME } from "../constants";
-import { LIGHT_TOKENS, DARK_TOKENS } from "../constants";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Navbar from "../components/Navbar";
@@ -10,19 +9,13 @@ interface Props {
   children: ReactNode;
 }
 
-const montserrat = Montserrat({
+const montserrat = Fira_Code({
   subsets: ["latin"],
-  display: "swap",
 });
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html
-      lang="en"
-      className={montserrat.className}
-      style={DARK_TOKENS as React.CSSProperties}
-      suppressHydrationWarning
-    >
+    <html lang="en" className={montserrat.className} suppressHydrationWarning>
       <body>
         <ThemeProvider>
           <Navbar></Navbar>

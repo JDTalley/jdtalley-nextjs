@@ -47,7 +47,7 @@ export default function Navbar() {
             <NavigationMenu.Item>
               <Link href="/" passHref legacyBehavior>
                 <NavigationMenu.Link className={styles.NavigationMenuLink}>
-                  JDTalley
+                  Dakota Talley
                 </NavigationMenu.Link>
               </Link>
             </NavigationMenu.Item>
