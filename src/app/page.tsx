@@ -1,7 +1,6 @@
-import { getAllPostsByDate } from '../helpers/file-helpers';
-import MainWrapper from '../components/Home/MainWrapper';
-import SidebarWrapper from '../components/Home/SidebarWrapper';
-import Card from '../components/Card';
+import { getAllPostsByDate } from "../helpers/file-helpers";
+import MainWrapper from "../components/Home/MainWrapper";
+import Card from "../components/Card";
 
 async function HomePage() {
   const posts = await getAllPostsByDate();

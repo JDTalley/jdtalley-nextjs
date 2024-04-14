@@ -12,10 +12,7 @@
   "author": "Dakota Talley",
   "license": "ISC",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.4.0",
-    "@fortawesome/free-regular-svg-icons": "^6.4.0",
-    "@fortawesome/free-solid-svg-icons": "^6.4.0",
-    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@radix-ui/react-icons": "^1.3.0",
     "gray-matter": "^4.0.3",
     "next": "^14.2.1",
     "next-mdx-remote": "^4.4.1",

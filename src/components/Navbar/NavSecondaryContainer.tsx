@@ -1,11 +1,7 @@
-'use client';
-import React, { ReactNode } from 'react';
-import styled from 'styled-components';
-import IconButton from '../IconButton';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { faMoon } from '@fortawesome/free-solid-svg-icons';
-//import { faSun } from "@fortawesome/free-solid-svg-icons";
+"use client";
+import React, { ReactNode } from "react";
+import styled from "styled-components";
+import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 interface Props {
   children: ReactNode;
@@ -41,7 +37,7 @@ const DropdownList = styled.ul<UlProps>`
   justify-content: space-between;
 
   @media (max-width: 900px) {
-    display: ${(props) => (props.$display ? 'block' : 'none')};
+    display: ${(props) => (props.$display ? "block" : "none")};
     position: absolute;
     box-sizing: border-box;
     left: 0;
@@ -58,11 +54,8 @@ export default function NavSecondaryContainer({ children }: Props) {
 
   return (
     <Wrapper>
-      {/* <IconButton>
-        <FontAwesomeIcon icon={faMoon}></FontAwesomeIcon>
-      </IconButton> */}
       <Button onClick={() => setDisplay(!display)}>
-        <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
+        <HamburgerMenuIcon />
       </Button>
       <DropdownList $display={display}>{children}</DropdownList>
     </Wrapper>
