@@ -1,11 +1,11 @@
 import { getAllPostsByDate } from "../helpers/file-helpers";
-import MainWrapper from "../components/Home/MainWrapper";
+import styles from "./page.module.css";
 import Card from "../components/Card";
 
 async function HomePage() {
   const posts = await getAllPostsByDate();
   return (
-    <MainWrapper>
+    <main className={styles.container}>
       <div>
         <h1>Recently Published</h1>
         <div>
@@ -22,7 +22,7 @@ async function HomePage() {
           })}
         </div>
       </div>
-    </MainWrapper>
+    </main>
   );
 }
 

@@ -1,0 +1,35 @@
+.container {
+  background-color: var(--gray-2);
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.sticking {
+  border-bottom: var(--gray-a6) 1px solid;
+}
+
+.NavigationMenuRoot {
+  max-width: 1024px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.NavigationMenuList {
+  list-style: none;
+  padding: 0;
+}
+
+.NavigationMenuLink {
+  display: block;
+  text-decoration: none;
+  color: var(--gray-a12);
+  font-weight: 500;
+}
+
+.NavigationMenuLink:hover {
+  color: var(--blue-11);
+}
