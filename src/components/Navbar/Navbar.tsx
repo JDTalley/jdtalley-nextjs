@@ -43,7 +43,7 @@ export default function Navbar() {
       <div data-scroll-watcher="" ref={containerRef}></div>
       <div className={`${styles.sticky} ${sticking} ${styles.container}`}>
         <NavigationMenu.Root className={styles.NavigationMenuRoot}>
-          <NavigationMenu.List className={`${styles.NavigationMenuList}`}>
+          <NavigationMenu.List className={styles.NavigationMenuList}>
             <NavigationMenu.Item>
               <Link href="/" passHref legacyBehavior>
                 <NavigationMenu.Link className={styles.NavigationMenuLink}>

@@ -7,10 +7,6 @@ async function HomePage() {
   return (
     <div>
       <div>
-        <h2>About</h2>
-      </div>
-      <div>
-        <h2>Projects</h2>
         <div className={styles.projects}>
           {posts.map(({ slug, title, excerpt, datePublished }) => {
             return (
