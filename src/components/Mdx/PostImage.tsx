@@ -1,30 +1,17 @@
-import React from 'react';
-import Image, { ImageProps } from 'next/image';
-import Link from 'next/link';
+import React from "react";
+import Image, { ImageProps } from "next/image";
+import Link from "next/link";
+import styles from "./mdx.module.css";
 
 function PostImage(props: ImageProps) {
-  const linkStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-  };
-
-  const imageStyle = {
-    width: '100%',
-    height: 'auto',
-  };
-
   return (
     <div>
       <Link
         href={props.src.toString()}
-        target='_blank'
-        style={linkStyle as React.CSSProperties}
+        target="_blank"
+        className={styles.imageLink}
       >
-        <Image
-          {...props}
-          alt={props.alt}
-          style={imageStyle as React.CSSProperties}
-        />
+        <Image {...props} alt={props.alt} className={styles.image} />
       </Link>
     </div>
   );

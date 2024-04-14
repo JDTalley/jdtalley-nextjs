@@ -1,11 +1,11 @@
-import React from 'react';
-import FooterWrapper from './FooterWrapper';
+import React from "react";
+import styles from "./footer.module.css";
 
 function Footer() {
   return (
-    <FooterWrapper>
-      <p>Dakota Talley - 2023</p>
-    </FooterWrapper>
+    <footer className={styles.container}>
+      <p>Dakota Talley - 2024</p>
+    </footer>
   );
 }
 
